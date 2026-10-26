@@ -44,3 +44,7 @@ Screen Time requires a native build and platform permissions. iOS uses Family Co
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for development and pull-request guidelines. Report security issues privately using [SECURITY.md](SECURITY.md).
+
+## License
+
+Sumore is available under the [MIT License](LICENSE). Third-party components retain their own licenses; see [Third party notices](THIRD_PARTY_NOTICES.md).
