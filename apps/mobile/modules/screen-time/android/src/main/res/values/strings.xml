@@ -1,0 +1,4 @@
+<resources>
+  <string name="sumore_accessibility_label">sumore app limits</string>
+  <string name="sumore_accessibility_description">With your consent, sumore detects which app is open and covers your selected apps when their chosen daily limits are reached. These are your limits, not your circle’s. It does not read screen content, typing, messages, or passwords. App choices and usage stay on this device. You can turn this service off in Android Settings.</string>
+</resources>

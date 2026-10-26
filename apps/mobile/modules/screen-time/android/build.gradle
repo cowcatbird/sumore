@@ -1,0 +1,26 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.screentime'
+version = '1.0.0'
+
+android {
+  namespace 'expo.modules.screentime'
+  defaultConfig {
+    minSdkVersion 24
+    // Expo SDK57's module publication setup requires a library version here,
+    // independently of the app's EAS-managed versionCode/versionName.
+    versionCode 1
+    versionName '1.0.0'
+  }
+  compileOptions { coreLibraryDesugaringEnabled true }
+}
+
+dependencies {
+  coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+  testImplementation 'junit:junit:4.13.2'
+  // Android's stub JSONObject cannot exercise persisted receipts in JVM tests.
+  testImplementation 'org.json:json:20180813'
+}

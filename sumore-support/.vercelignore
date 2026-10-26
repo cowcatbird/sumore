@@ -1,0 +1,8 @@
+.openai/
+.vercel/
+.git/
+.env
+.env.*
+README.md
+validate-site.test.mjs
+node_modules/

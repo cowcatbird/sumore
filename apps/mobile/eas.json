@@ -1,0 +1,58 @@
+{
+  "cli": {
+    "version": ">= 23.2.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development"
+    },
+    "development-simulator": {
+      "developmentClient": true,
+      "ios": {
+        "simulator": true
+      },
+      "channel": "development-simulator"
+    },
+    "screen-time-simulator": {
+      "extends": "development-simulator",
+      "env": {
+        "SUMORE_SCREEN_TIME_ENABLED": "true"
+      }
+    },
+    "preview": {
+      "autoIncrement": true,
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+        "SUMORE_ANDROID_PUSH_REQUIRED": "true"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "blocking-validation-android": {
+      "extends": "preview",
+      "channel": "blocking-validation",
+      "android": {
+        "gradleCommand": ":screen-time:testReleaseUnitTest :app:assembleRelease"
+      }
+    },
+    "blocking-validation-ios": {
+      "extends": "production",
+      "channel": "blocking-validation"
+    },
+    "production": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "SUMORE_ANDROID_PUSH_REQUIRED": "true"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
